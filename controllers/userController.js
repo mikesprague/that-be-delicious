@@ -62,6 +62,26 @@ exports.validateLogin = (req, res, next) => {
   next();
 };
 
+exports.validateEmail = (req, res, next) => {
+  req.checkBody('email', 'You must supply a valid email').isEmail();
+  req.sanitizeBody('email').normalizeEmail({
+    remove_dots: false,
+    remove_extension: false,
+    gmail_remove_subaddress: false,
+  });
+  const errors = req.validationErrors();
+  if (errors) {
+    req.flash('error', errors.map(err => err.msg));
+    res.render('login', {
+      title: 'Login',
+      body: req.body,
+      flashes: req.flash(),
+    });
+    return;
+  }
+  next();
+};
+
 exports.register = async (req, res, next) => {
   const user = new User({
     email: req.body.email,
@@ -73,6 +93,23 @@ exports.register = async (req, res, next) => {
   next(); // move on to authController.login
 };
 
-exports.login = async (req, res) => {
-  res.send('it works!');
+exports.account = (req, res) => {
+  res.render('account', { title: 'Edit Your Account' });
+};
+
+exports.updateAccount = async (req, res) => {
+  const updates = {
+    name: req.body.name,
+    email: req.body.email,
+  };
+
+  // findOneAndUpdate takes in a query, the updates to perform, and options
+  await User.findOneAndUpdate(
+    { _id: req.user._id },
+    { $set: updates },
+    { new: true, runValidators: true, context: 'query' },
+  ).exec();
+
+  req.flash('success', 'Your account has been updated 🙌');
+  res.redirect('/account');
 };

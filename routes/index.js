@@ -21,6 +21,7 @@ router.get('/stores/:id/delete', catchErrors(storeController.deleteStore));
 
 router.get('/add', authController.isLoggedIn, storeController.addStore);
 router.post('/add',
+  authController.isLoggedIn,
   storeController.upload,
   catchErrors(storeController.resize),
   catchErrors(storeController.createStore));
@@ -39,4 +40,9 @@ router.post('/login', userController.validateLogin, authController.login);
 
 router.get('/logout', authController.logout);
 
+router.get('/account', authController.isLoggedIn, userController.account);
+router.post('/account', authController.isLoggedIn, catchErrors(userController.updateAccount));
+router.post('/account/forgot', userController.validateEmail, catchErrors(authController.forgot));
+router.get('/account/reset/:token', catchErrors(authController.reset));
+router.post('/account/reset/:token', authController.confirmedPasswords, catchErrors(authController.update));
 module.exports = router;
