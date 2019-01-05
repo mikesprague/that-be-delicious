@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const promisify = require('es6-promisify');
+const { promisify } = require('es6-promisify');
 
 const User = mongoose.model('User');
 
@@ -68,7 +68,7 @@ exports.register = async (req, res, next) => {
     name: req.body.name,
   });
   // User.register - register is bound to User via passport-local-mongoose library - version in use here uses callbacks so we promisify it to make use of async/await
-  const register = promisify(User.register, User); // if registering to an object, you must also pass the object so it knows what to bind to
+  const register = promisify(User.register.bind(User)); // if registering to an object, you must also pass the object so it knows what to bind to
   await register(user, req.body.password);
   next(); // move on to authController.login
 };
