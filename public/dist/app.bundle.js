@@ -1007,7 +1007,7 @@ var axios = __webpack_require__(12);
 
 function searchResultsHtml(stores) {
   return stores.map(function (store) {
-    return '\n      <a href="/stores/' + store.slug + '" class="search__result">\n        <strong>' + store.name + '</strong>\n      </a>\n    ';
+    return '\n    <a href="/stores/' + store.slug + '" class="search__result">\n      <strong>' + store.name + '</strong>\n    </a>\n  ';
   }).join('');
 }
 
@@ -1907,4 +1907,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=App.bundle.js.map
+//# sourceMappingURL=app.bundle.js.map

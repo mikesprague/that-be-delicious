@@ -1,7 +1,7 @@
 mixin storeForm(store = {})
   form(action=(store._id ? `/stores/${store._id}/edit` : '/add') method="POST" class="card" enctype="multipart/form-data")
-    label(for="storeName") Name
-    input(type="text" id="storeName" name="storeName" value=store.storeName)
+    label(for="name") Name
+    input(type="text" id="name" name="name" value=store.name)
     label(for="description") Description
     textarea(name="description" id="description" cols="30" rows="4")= store.description
     label(for="photo") Photo

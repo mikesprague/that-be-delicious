@@ -52,7 +52,7 @@ exports.resize = async (req, res, next) => {
 exports.createStore = async (req, res) => {
   req.body.author = req.user._id;
   const store = await (new Store(req.body)).save();
-  req.flash('success', `Successfully created ${store.storeName}. Care to leave a review?`);
+  req.flash('success', `Successfully created ${store.name} ✨. Care to leave a review?`);
   res.redirect(`/stores/${store.slug}`);
 };
 
@@ -68,7 +68,7 @@ exports.getStoreBySlug = async (req, res, next) => {
   const store = await Store.findOne({ slug: req.params.slug }).populate('author');
   if (store) {
     res.render('store', {
-      title: store.storeName,
+      title: store.name,
       store,
     });
   } else {
@@ -112,12 +112,12 @@ exports.updateStore = async (req, res) => {
     new: true, // returns new value instead of old one
     runValidators: true, // runs any validations (e.g. required) included in schema
   }).exec();
-  req.flash('success', `Successfully updated ${store.storeName}. <a href="/stores/${store.slug}">View Store ➡</a>`);
+  req.flash('success', `Successfully updated ${store.name} 🙌. <a href="/stores/${store.slug}">View Store ➡</a>`);
   res.redirect(`/stores/${req.params.id}/edit`);
 };
 
 exports.deleteStore = async (req, res) => {
   const store = await Store.findOneAndRemove({ _id: req.params.id }).exec();
-  req.flash('success', `Successfully removed ${store.storeName}`);
+  req.flash('success', `Successfully removed ${store.name} 🗑`);
   res.redirect('/stores');
 };

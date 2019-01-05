@@ -4,7 +4,7 @@ const slug = require('slugs');
 mongoose.Promise = global.Promise;
 
 const storeSchema = new mongoose.Schema({
-  storeName: {
+  name: {
     type: String,
     trim: true,
     required: 'Please enter a store name',
@@ -45,10 +45,10 @@ const storeSchema = new mongoose.Schema({
 
 /* eslint-disable func-names */
 storeSchema.pre('save', async function(next) {
-  if (!this.isModified('storeName')) {
+  if (!this.isModified('name')) {
     return next();
   }
-  this.slug = slug(this.storeName);
+  this.slug = slug(this.name);
   // regex to match slug-1 pattern
   const slugRegex = new RegExp(`^(${this.slug})((-[0-9]*$)?)$`, 'i');
   // search db for matching slugs
