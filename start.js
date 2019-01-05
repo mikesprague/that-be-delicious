@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
-// fix deprecation warning after upgrdading to latest mongoose (DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.)
+// fix deprecation warnings after upgrdading to latest mongoose
 mongoose.set('useCreateIndex', true);
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
 
 // Make sure we are running node 7.6+
 const [major, minor] = process.versions.node.split('.').map(parseFloat);
@@ -14,7 +16,7 @@ if (major < 7 || (major === 7 && minor <= 5)) {
 require('dotenv').config({ path: 'variables.env' });
 
 // Connect to our Database and handle any bad connections
-mongoose.connect(process.env.DATABASE, { useNewUrlParser: true }); // using { useNewUrlParser: true } fixes deprecation warning after mongoose upgrade
+mongoose.connect(process.env.DATABASE);
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 mongoose.connection.on('error', (err) => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
