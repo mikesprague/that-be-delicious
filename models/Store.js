@@ -57,7 +57,7 @@ storeSchema.pre('save', async function(next) {
     // found existing slug(s), update url to next number
     this.slug = `${this.slug}-${storesWithSlug.length + 1}`;
   }
-  next();
+  return next();
 });
 
 storeSchema.statics.getTagsList = function() {
