@@ -121,3 +121,17 @@ exports.deleteStore = async (req, res) => {
   req.flash('success', `Successfully removed ${store.name} 🗑`);
   res.redirect('/stores');
 };
+
+exports.searchStores = async (req, res) => {
+  const stores = await Store.find({
+    $text: {
+      $search: req.query.q,
+      $caseSensitive: false,
+    },
+  }, { // project: projects (adds) a field on to the query
+    score: { $meta: 'textScore' },
+  }).sort({
+    score: { $meta: 'textScore' },
+  }).limit(5); // limit to 5 results
+  res.json(stores);
+};

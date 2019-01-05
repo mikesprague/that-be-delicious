@@ -43,6 +43,11 @@ const storeSchema = new mongoose.Schema({
   },
 });
 
+storeSchema.index({
+  name: 'text',
+  description: 'text',
+});
+
 /* eslint-disable func-names */
 storeSchema.pre('save', async function(next) {
   if (!this.isModified('name')) {
