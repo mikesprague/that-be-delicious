@@ -4,8 +4,9 @@
     border: 0;
     outline: 0;
     position: relative;
+    cursor: pointer;
     &:after {
-      content: '♥️';
+      content: '♥';
       font-size: 20px;
       position: absolute;
       opacity: 0;

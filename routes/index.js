@@ -31,6 +31,8 @@ router.get('/tags/:tag', catchErrors(storeController.getStoresByTag));
 
 router.get('/map', catchErrors(storeController.mapPage));
 
+router.get('/hearts', authController.isLoggedIn, catchErrors(storeController.getHearts));
+
 router.get('/register', userController.registerForm);
 router.post('/register',
   userController.validateRegister,
@@ -50,5 +52,6 @@ router.post('/account/reset/:token', authController.confirmedPasswords, catchErr
 
 router.get('/api/search', catchErrors(storeController.searchStores));
 router.get('/api/stores/near', catchErrors(storeController.mapStores));
+router.post('/api/stores/:id/heart', catchErrors(storeController.heartStore));
 
 module.exports = router;
