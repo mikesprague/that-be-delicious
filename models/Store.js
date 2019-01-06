@@ -48,7 +48,8 @@ storeSchema.index({
   description: 'text',
 });
 
-/* eslint-disable func-names */
+storeSchema.index({ location: '2dsphere' });
+
 storeSchema.pre('save', async function(next) {
   if (!this.isModified('name')) {
     return next();
