@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
-const { promisify } = require('es6-promisify');
 
 const Review = mongoose.model('Review');
-const Store = mongoose.model('Store');
-const User = mongoose.model('User');
 
 exports.addReview = async (req, res) => {
   req.body.author = req.user._id;
