@@ -24,9 +24,9 @@ const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
 
 async function deleteData() {
   console.log('😢😢 Goodbye Data...');
-  await Store.remove();
-  await Review.remove();
-  await User.remove();
+  await Store.deleteMany();
+  await Review.deleteMany();
+  await User.deleteMany();
   console.log('Data Deleted. To load sample data, run\n\n\t npm run sample\n\n');
   process.exit();
 }
