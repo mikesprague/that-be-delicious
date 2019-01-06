@@ -911,7 +911,7 @@ label {
   position: relative;
   cursor: pointer; }
   .heart__button:after {
-    content: '\1F496';
+    content: '\2665';
     font-size: 20px;
     position: absolute;
     opacity: 0;
