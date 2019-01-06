@@ -2,9 +2,10 @@ function autocomplete(addressInput, latInput, lngInput) {
   if (!addressInput) return;
 
   /* eslint-disable no-undef */ // eslint was unaware of google since it's being included at the html level
-  const dropdown = new google.maps.places.Autocomplete(addressInput, {
-    types: ['establishment'],
-  });
+  const dropdown = new google.maps.places.Autocomplete(addressInput);
+  // {
+  //   types: ['establishment'],
+  // }
   /* eslint-enable no-undef */
 
   dropdown.addListener('place_changed', () => {
