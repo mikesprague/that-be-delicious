@@ -908,9 +908,10 @@ label {
   background: none;
   border: 0;
   outline: 0;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .heart__button:after {
-    content: '\2665\FE0F';
+    content: '\1F496';
     font-size: 20px;
     position: absolute;
     opacity: 0;
