@@ -34,6 +34,8 @@ router.get('/map', catchErrors(storeController.mapPage));
 
 router.get('/hearts', authController.isLoggedIn, catchErrors(storeController.getHearts));
 
+router.get('/top', catchErrors(storeController.getTopStores));
+
 router.post('/reviews/:id', authController.isLoggedIn, catchErrors(reviewController.addReview));
 
 router.get('/register', userController.registerForm);

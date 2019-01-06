@@ -78,11 +78,43 @@ storeSchema.statics.getTagsList = function() {
   ]);
 };
 
+storeSchema.statics.getTopStores = function() {
+  return this.aggregate([
+    // look up stores and populate their reviews
+    {
+      $lookup: {
+        // 'from' value comes from mongodb (it automatically takes model name and lowercase and adds an 's')
+        from: 'reviews',
+        localField: '_id',
+        foreignField: 'store',
+        as: 'reviews',
+      },
+    },
+    // filter for only stores with more than 2 reviews
+    // this is how you access index based values in mongo, so this checks for at least items with at least 2 reviews since it's a zero based index
+    { $match: { 'reviews.1': { $exists: true } } },
+    // add the average reviews field
+    { $addFields: { averageRating: { $avg: '$reviews.rating' } } },
+    // sort it by the new field, highest first
+    { $sort: { averageRating: -1 } },
+    // limit it to max of 10 results
+    { $limit: 10 },
+  ]);
+};
+
 // make reviews available via the store
 storeSchema.virtual('reviews', {
   ref: 'Review', // which model to link
   localField: '_id', // which field on the store
   foreignField: 'store', // which field on the review
 });
+
+function autocompleteReviews(next) {
+  this.populate('reviews');
+  next();
+}
+
+storeSchema.pre('find', autocompleteReviews);
+storeSchema.pre('findOne', autocompleteReviews);
 
 module.exports = mongoose.model('Store', storeSchema);
