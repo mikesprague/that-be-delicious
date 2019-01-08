@@ -1,5 +1,7 @@
 ## What is this?
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mikesprague/that-be-delicious.svg)](https://greenkeeper.io/)
+
 This is my version of the "Now That's Delicious" app built during the
 [Learn Node](https://learnnode.com/) by @wesbos.
 
