@@ -7,11 +7,13 @@ This is my version of the "Now That's Delicious" app built during the
 
 I followed along for the most part, here's where I diverted:
 
-- All (non-dev) dependencies are now current as of time of writing
+- All dependencies (including dev) are now current as of time of writing
 - Dependency updates that required syntax changes:
   - `es6-promisify`
     - Before: `promisify(User.register, User)`
-    - After: `promisify(User.register.bind(User))`
+      After: `promisify(User.register.bind(User))`
+    - Before: `const promisify = require('es6-promisify');`
+      After: `const { promisify } = require('es6-promisify');`
   - `mongoose`
     - Added to prevent deprecation warnings:
       - `start.js` and `data/load-sample-data.js`
