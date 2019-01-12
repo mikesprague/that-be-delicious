@@ -53,6 +53,8 @@
     "babel-preset-env": "^1.7.0",
     "concurrently": "4.1.0",
     "css-loader": "^2.1.0",
+    "eslint": "^5.12.0",
+    "eslint-config-prettier": "^3.3.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
@@ -60,18 +62,27 @@
     "sass-loader": "^7.1.0",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpackbar": "^3.1.4"
   },
   "babel": {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true,
-      "browser": true
+    "parserOptions": {
+      "ecmaVersion": "2018"
     },
-    "extends": "airbnb-base",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "eslint-config-prettier"
+    ],
     "plugins": [
       "import",
       "html",
@@ -92,14 +103,18 @@
     }
   },
   "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all",
     "arrowParens": "avoid",
-    "semi": true,
-    "tabWidth": 2,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
     "plugins": [
       "all"
     ],
-    "printWidth": 102
+    "printWidth": 102,
+    "proseWrap": "always",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
   }
 }

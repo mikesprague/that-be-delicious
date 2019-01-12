@@ -4,6 +4,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const WebPackBar = require('webpackbar');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const autoprefixer = require('autoprefixer');
@@ -16,7 +17,11 @@ const autoprefixer = require('autoprefixer');
 const postcss = {
   loader: 'postcss-loader',
   options: {
-    plugins() { return [autoprefixer({ browsers: 'last 3 versions' })]; },
+    plugins() {
+      return [autoprefixer({
+        browsers: 'last 3 versions'
+      })];
+    },
   },
 };
 
@@ -54,35 +59,34 @@ const config = {
 
   // remember we said webpack sees everthing as modules and how different loaders are responsible for different file types? Here is is where we implement them. Pass it the rules for our JS and our styles
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js)$/, // see how we match anything that ends in `.js`? Cool
         use: [{
           loader: 'babel-loader',
-          options: { presets: ['@babel/env'] }, // this is one way of passing options
+          options: {
+            presets: ['@babel/env']
+          },
         }],
       },
       {
         // here we pass the options as query params b/c it's short.
         // remember above we used an object for each loader instead of just a string?
         // We don't just pass an array of loaders, we run them through the extract plugin so they can be outputted to their own .css file
-        rules: [
-          {
-            test: /\.(scss)$/,
-            use: [
-              MiniCssExtractPlugin.loader,
-              'css-loader?sourceMap',
-              postcss,
-              'sass-loader?sourceMap',
-            ],
-          },
-        ],
+        rules: [{
+          test: /\.(scss)$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader?sourceMap',
+            postcss,
+            'sass-loader?sourceMap',
+          ],
+        }],
       },
     ],
   },
-  // finally we pass it an array of our plugins - uncomment if you want to uglify
-  // plugins: [uglify]
+  // finally we pass it an array of our plugins
   plugins: [
+    new WebPackBar(),
     // here is where we tell it to output our css to a separate file
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
