@@ -1,4 +1,5 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/mikesprague/that-be-delicious.svg)](https://greenkeeper.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious?ref=badge_shield)
 
 ## What is this?
 
@@ -59,3 +60,7 @@ That will populate 16 stores with 3 authors and 41 reviews. The logins for the a
 |Beau|beau@example.com|beau|
 
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious?ref=badge_large)
