@@ -1,5 +1,4 @@
-[![Greenkeeper badge](https://badges.greenkeeper.io/mikesprague/that-be-delicious.svg)](https://greenkeeper.io/)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious?ref=badge_shield)
+[![Greenkeeper badge](https://badges.greenkeeper.io/mikesprague/that-be-delicious.svg)](https://greenkeeper.io/) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmikesprague%2Fthat-be-delicious?ref=badge_shield)
 
 ## What is this?
 
