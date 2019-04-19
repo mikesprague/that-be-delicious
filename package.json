@@ -62,7 +62,7 @@
     "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
-    "webpackbar": "^3.1.5"
+    "webpackbar": "^3.2.0"
   },
   "babel": {
     "presets": [
