@@ -5458,10 +5458,10 @@ mongoose-mongodb-errors@^0.0.2:
   resolved "https://registry.yarnpkg.com/mongoose-mongodb-errors/-/mongoose-mongodb-errors-0.0.2.tgz#7feacb8c901b5f899c616652337b2f499717291c"
   integrity sha1-f+rLjJAbX4mcYWZSM3svSZcXKRw=
 
-mongoose@^5.5.5:
-  version "5.5.5"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.5.5.tgz#d04b97a1ad0740671deeeee09ded5149fa47fe56"
-  integrity sha512-rov43FpXDMoE22q8/iUoeSdg6zBtyTE/ZIIKRpQomASl0JOyD0479Weu9w5g0GjmP8fHmNjsWneoLIbnyGcnDQ==
+mongoose@^5.5.6:
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.5.6.tgz#ab03488a4dd82f7015271a61a4f85de6b6b19cb2"
+  integrity sha512-XbCVIQTQgzRAPLc8t8Tw5l/uTzdRV6lDnR7Q8KCsXnaX4D1tEFybtWxesidn4WkrGi67PiIWzu5Lsu7SwKkYug==
   dependencies:
     async "2.6.1"
     bson "~1.1.1"
@@ -5469,7 +5469,7 @@ mongoose@^5.5.5:
     mongodb "3.2.3"
     mongodb-core "3.2.3"
     mongoose-legacy-pluralize "1.0.2"
-    mpath "0.5.2"
+    mpath "0.6.0"
     mquery "3.2.0"
     ms "2.1.1"
     regexp-clone "0.0.1"
@@ -5489,10 +5489,10 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mpath@0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/mpath/-/mpath-0.5.2.tgz#b1eac586dffb5175d2f51ca9aacba35d9940dd41"
-  integrity sha512-NOeCoW6AYc3hLi30npe7uzbD9b4FQZKH40YKABUCCvaKKL5agj6YzvHoNx8jQpDMNPgIa5bvSZQbQpWBAVD0Kw==
+mpath@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/mpath/-/mpath-0.6.0.tgz#aa922029fca4f0f641f360e74c5c1b6a4c47078e"
+  integrity sha512-i75qh79MJ5Xo/sbhxrDrPSEG0H/mr1kcZXJ8dH6URU5jD/knFxCVqVC/gVSW7GIXL/9hHWlT9haLbCXWOll3qw==
 
 mquery@3.2.0:
   version "3.2.0"
@@ -7385,10 +7385,10 @@ snyk-config@^2.2.1:
     lodash "^4.17.11"
     nconf "^0.10.0"
 
-snyk-docker-plugin@1.24.0:
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.24.0.tgz#295f503fe65c2c982e0f9c97ecf653259ad2aa38"
-  integrity sha512-otWh2m/o1EBpzPFYM5QqZQ9b201KThFqf1zznQVWbicNFcR1M3hzwEnIL5+KrHUUUNcNXdNfcKUiqAETe2C4MA==
+snyk-docker-plugin@1.24.1:
+  version "1.24.1"
+  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-1.24.1.tgz#a27fdabfdc86b00423968217850eff17ccdbd212"
+  integrity sha512-Y130BbrZ5hEPhjR1s57n5m1kNnlh4ydA000nPY4HvXylAX3JWQZR3/HFJ6nCKLes/z1cH19EsSdBNw7+r/N2ag==
   dependencies:
     debug "^3"
     dockerfile-ast "0.0.12"
@@ -7550,10 +7550,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.161.1:
-  version "1.161.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.161.1.tgz#a142e71f76b5ef164468ae8d82ca66fa3508aceb"
-  integrity sha512-DsIltQOMT/MzGzcAyhvFCstmCd91gunjsfW0kbuLGR9hnT8GlWU3WjqmigAEFvGAVmS16frWapkQHdd0D65gGw==
+snyk@^1.161.2:
+  version "1.161.2"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.161.2.tgz#5adf130a9b32762ca28b003a2a5bd768397a8eba"
+  integrity sha512-97n1AbkiCrnGRGYwqlAliRxC4nJBfuOlmCt1sYjPMeDphCMHsZT2/O3PjGc21+i99g+g5wBiuVNr8LVZZShl7A==
   dependencies:
     "@snyk/dep-graph" "1.4.1"
     "@snyk/gemfile" "1.2.0"
@@ -7573,7 +7573,7 @@ snyk@^1.161.1:
     proxy-from-env "^1.0.0"
     semver "^6.0.0"
     snyk-config "^2.2.1"
-    snyk-docker-plugin "1.24.0"
+    snyk-docker-plugin "1.24.1"
     snyk-go-plugin "1.7.1"
     snyk-gradle-plugin "2.10.0"
     snyk-module "1.9.1"
