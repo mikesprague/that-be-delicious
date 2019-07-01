@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 const { promisify } = require('es6-promisify');
+const {
+  body,
+  sanitizeBody,
+  validationResult,
+} = require('express-validator');
 
 const User = mongoose.model('User');
 
@@ -16,18 +21,18 @@ exports.registerForm = (req, res) => {
 };
 
 exports.validateRegister = (req, res, next) => {
-  req.sanitizeBody('name');
-  req.checkBody('name', 'You must supply a name').notEmpty();
-  req.checkBody('email', 'You must supply a valid email').isEmail();
-  req.sanitizeBody('email').normalizeEmail({
+  sanitizeBody('name');
+  body('name', 'You must supply a name').not().isEmpty();
+  body('email', 'You must supply a valid email').isEmail();
+  sanitizeBody('email').normalizeEmail({
     remove_dots: false,
     remove_extension: false,
     gmail_remove_subaddress: false,
   });
-  req.checkBody('password', 'Password can not be blank').notEmpty();
-  req.checkBody('passwordConfirm', 'Confirmed password can not be blank').notEmpty();
-  req.checkBody('passwordConfirm', 'Your passwords do not match').equals(req.body.password);
-  const errors = req.validationErrors();
+  body('password', 'Password can not be blank').not().isEmpty();
+  body('passwordConfirm', 'Confirmed password can not be blank').not().isEmpty();
+  body('passwordConfirm', 'Your passwords do not match').equals(req.body.password);
+  const errors = validationResult(req);
   if (errors) {
     req.flash('error', errors.map(err => err.msg));
     res.render('register', {
@@ -41,15 +46,15 @@ exports.validateRegister = (req, res, next) => {
 };
 
 exports.validateLogin = (req, res, next) => {
-  req.checkBody('email', 'You must supply a valid email').isEmail();
-  req.sanitizeBody('email').normalizeEmail({
+  body('email', 'You must supply a valid email').isEmail();
+  sanitizeBody('email').normalizeEmail({
     remove_dots: false,
     remove_extension: false,
     gmail_remove_subaddress: false,
   });
-  req.sanitizeBody('password');
-  req.checkBody('password', 'You must supply your password').notEmpty();
-  const errors = req.validationErrors();
+  sanitizeBody('password');
+  body('password', 'You must supply your password').not().isEmpty();
+  const errors = validationResult(req);
   if (errors) {
     req.flash('error', errors.map(err => err.msg));
     res.render('login', {
@@ -63,13 +68,13 @@ exports.validateLogin = (req, res, next) => {
 };
 
 exports.validateEmail = (req, res, next) => {
-  req.checkBody('email', 'You must supply a valid email').isEmail();
-  req.sanitizeBody('email').normalizeEmail({
+  body('email', 'You must supply a valid email').isEmail();
+  sanitizeBody('email').normalizeEmail({
     remove_dots: false,
     remove_extension: false,
     gmail_remove_subaddress: false,
   });
-  const errors = req.validationErrors();
+  const errors = validationResult(req);
   if (errors) {
     req.flash('error', errors.map(err => err.msg));
     res.render('login', {
