@@ -13,7 +13,7 @@
     "start": "node ./start.js",
     "watch": "nodemon ./start.js --inspect --ignore public/",
     "snyk-protect": "snyk protect",
-    "prepublish": "yarn snyk-protect"
+    "prepublish": "npm run snyk-protect; yarn snyk-protect"
   },
   "browserslist": "last 3 versions",
   "dependencies": {

@@ -1,8 +1,45 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.3
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-AXIOS-174505:
     - axios:
         patched: '2019-05-06T08:18:49.513Z'
+  SNYK-JS-LODASH-450202:
+    - snyk > inquirer > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - express-validator > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - html-to-text > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - mongoose > async > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - juice > web-resource-inliner > async > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - pug > pug-filters > constantinople > babel-types > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - pug > pug-code-gen > constantinople > babel-types > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
+    - pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
+        patched: '2019-07-04T08:18:44.698Z'
