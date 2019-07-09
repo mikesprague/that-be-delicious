@@ -34,7 +34,7 @@
     "jimp": "^0.6.4",
     "juice": "^5.2.0",
     "md5": "^2.2.1",
-    "mongoose": "^5.6.3",
+    "mongoose": "^5.6.4",
     "mongoose-mongodb-errors": "^0.0.2",
     "multer": "^1.4.1",
     "nodemailer": "^6.2.1",
@@ -48,8 +48,8 @@
     "snyk": "^1.192.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
