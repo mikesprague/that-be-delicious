@@ -43,3 +43,29 @@ patch:
         patched: '2019-07-07T21:34:12.094Z'
     - pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
         patched: '2019-07-07T21:34:12.094Z'
+    - juice > web-resource-inliner > async > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - express-validator > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - mongoose > async > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - html-to-text > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - pug > pug-code-gen > constantinople > babel-types > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - pug > pug-filters > constantinople > babel-types > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
+    - pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
+        patched: '2019-08-26T21:52:37.387Z'
