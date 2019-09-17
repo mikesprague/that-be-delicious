@@ -55,9 +55,9 @@
     "babel-preset-env": "^1.7.0",
     "concurrently": "^4.1.2",
     "css-loader": "^3.2.0",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.2.0",
+    "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-markdown": "^1.0.0",
@@ -67,8 +67,8 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
     "webpackbar": "^4.0.0"
   },
   "babel": {
