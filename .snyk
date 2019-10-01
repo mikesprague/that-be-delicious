@@ -69,3 +69,7 @@ patch:
         patched: '2019-08-26T21:52:37.387Z'
     - pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
         patched: '2019-08-26T21:52:37.387Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-01T16:01:36.594Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-01T16:01:36.594Z'
