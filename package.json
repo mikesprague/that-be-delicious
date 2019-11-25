@@ -48,14 +48,14 @@
     "snyk": "^1.251.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "autoprefixer": "^9.7.2",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "concurrently": "^5.0.0",
     "css-loader": "^3.2.0",
-    "eslint": "^6.7.0",
+    "eslint": "^6.7.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-html": "^6.0.0",
