@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const multer = require('multer');
 const jimp = require('jimp');
-const uuid = require('uuid');
+const uuidv4 = require('uuid').v4;
 
 const Store = mongoose.model('Store');
 const User = mongoose.model('User');
@@ -39,7 +39,7 @@ exports.resize = async (req, res, next) => {
   // get extension from mimetype
   const extension = req.file.mimetype.split('/')[1];
   // prepare filename and make it available on req.body
-  req.body.photo = `${uuid.v4()}.${extension}`;
+  req.body.photo = `${uuidv4()}.${extension}`;
   // read photo into jimp from buffer in memory
   const photo = await jimp.read(req.file.buffer);
   // resize photo
