@@ -31,7 +31,7 @@
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",
-    "dayjs": "^1.8.23",
+    "dayjs": "^1.8.24",
     "dompurify": "^2.0.8",
     "dotenv": "^8.2.0",
     "es6-promisify": "^6.1.0",
