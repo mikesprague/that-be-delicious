@@ -149,3 +149,13 @@ patch:
         patched: '2020-05-13T10:51:36.693Z'
     - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > snyk-config > lodash:
         patched: '2020-05-13T10:51:36.693Z'
+    - pug > pug-code-gen > constantinople > @babel/types > lodash:
+        patched: '2020-05-31T12:39:34.896Z'
+    - pug > pug-filters > constantinople > @babel/types > lodash:
+        patched: '2020-05-31T12:39:34.896Z'
+    - pug > pug-code-gen > with > babel-types > lodash:
+        patched: '2020-05-31T12:39:34.896Z'
+    - pug > pug-code-gen > pug-attrs > constantinople > @babel/types > lodash:
+        patched: '2020-05-31T12:39:34.896Z'
+    - pug > pug-code-gen > with > babylon-walk > babel-types > lodash:
+        patched: '2020-05-31T12:39:34.896Z'
