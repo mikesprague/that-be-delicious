@@ -43,7 +43,7 @@
     "html-to-text": "^5.1.1",
     "jimp": "^0.14.0",
     "juice": "^6.0.0",
-    "md5": "^2.2.1",
+    "md5": "^2.3.0",
     "mongoose": "^5.9.25",
     "mongoose-mongodb-errors": "^0.0.2",
     "multer": "^1.4.2",
