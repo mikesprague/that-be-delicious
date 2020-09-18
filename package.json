@@ -32,7 +32,7 @@
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",
     "dayjs": "^1.8.34",
-    "dompurify": "^2.0.12",
+    "dompurify": "^2.0.14",
     "dotenv": "^8.2.0",
     "es6-promisify": "^6.1.0",
     "express": "^4.17.1",
